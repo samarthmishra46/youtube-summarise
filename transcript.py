@@ -1,5 +1,9 @@
 from youtube_transcript_api import YouTubeTranscriptApi
+proxies = {
+    "https://geo.brdtest.com/mygeo.json": "http://brd-customer-hl_4dc132b4-zone-residential_proxy1:bider3t3u7x2@brd.superproxy.io:33335"
+}
 
+YouTubeTranscriptApi._session.proxies = proxies
 # Extract video ID from YouTube URL
 def get_video_id(url):
     if "v=" in url:
